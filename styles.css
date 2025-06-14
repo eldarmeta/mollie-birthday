@@ -1,79 +1,78 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap');
 
-* {
-  box-sizing: border-box;
-}
 body {
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: #fffdf8;
   font-family: 'Roboto', sans-serif;
   color: #111;
 }
-.wrapper {
-  position: relative;
-  min-height: 100vh;
-  background: #fdfdfd;
+
+.hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.overlay {
-  background: rgba(255,255,255,0.95);
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 640px;
-  margin: 20px;
+  padding: 40px 20px;
+  background: #fffdf8;
   text-align: center;
-  overflow-y: auto;
-  height: 90vh;
 }
-.main-photo {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
+
+.hero-img {
+  max-width: 95%;
+  max-height: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6em;
   margin-bottom: 20px;
 }
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5em;
-  margin-bottom: 16px;
+
+.hero button {
+  padding: 12px 24px;
+  font-size: 1em;
+  border: none;
+  background-color: #ff7eb9;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
-.text {
-  text-align: left;
+
+.hero button:hover {
+  background-color: #e066a1;
 }
-.text p {
-  margin: 14px 0;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.6s ease-out;
+
+.letter {
+  background: url('https://cdn.pixabay.com/photo/2016/10/21/14/36/flower-1751080_1280.png') no-repeat top left,
+              url('https://cdn.pixabay.com/photo/2016/10/21/14/36/flower-1751080_1280.png') no-repeat bottom right;
+  background-size: 120px, 120px;
+  padding: 60px 20px;
 }
-.text .signature {
-  margin-top: 30px;
+
+.letter-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+}
+
+.letter-container p {
+  margin: 16px 0;
+  line-height: 1.7;
+  font-size: 1.05em;
+}
+
+.signature {
   text-align: right;
   font-style: italic;
   font-weight: bold;
-}
-button {
-  margin: 30px auto;
-  padding: 12px 24px;
-  font-size: 1em;
-  cursor: pointer;
-  background: none;
-  border: 2px solid #111;
-  transition: 0.2s ease;
-}
-button:hover {
-  background: #111;
-  color: #fff;
-}
-.fade {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.6s ease-out;
-}
-.fade.visible {
-  opacity: 1;
-  transform: translateY(0);
+  margin-top: 30px;
 }
