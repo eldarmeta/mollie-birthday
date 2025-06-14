@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+  color: #111;
+}
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  background: #fdfdfd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay {
+  background: rgba(255,255,255,0.95);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 640px;
+  margin: 20px;
+  text-align: center;
+  overflow-y: auto;
+  height: 90vh;
+}
+.main-photo {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin-bottom: 16px;
+}
+.text {
+  text-align: left;
+}
+.text p {
+  margin: 14px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease-out;
+}
+.text .signature {
+  margin-top: 30px;
+  text-align: right;
+  font-style: italic;
+  font-weight: bold;
+}
+button {
+  margin: 30px auto;
+  padding: 12px 24px;
+  font-size: 1em;
+  cursor: pointer;
+  background: none;
+  border: 2px solid #111;
+  transition: 0.2s ease;
+}
+button:hover {
+  background: #111;
+  color: #fff;
+}
+.fade {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.6s ease-out;
+}
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

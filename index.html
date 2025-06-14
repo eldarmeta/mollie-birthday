@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday, Mollie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="overlay">
+      <img src="mollie_candles_resized.jpg" alt="Mollie" class="main-photo">
+      <h1 class="fade">Happy Birthday, Mollie</h1>
+      <div class="text fade">
+        <p>Today is your day, and even if I’m not with you physically, I’m with you in every other way.</p>
+        <p>You’re one of the kindest, deepest, and most genuine people I’ve ever known.</p>
+        <p>You know how to listen. You feel things deeply. You love with presence. And you know how to be there for people like no one else.</p>
+        <p>I want you to know how proud I am of you. Proud of the person you are.</p>
+        <p>You’re not just smart and beautiful — you’re strong and real.</p>
+        <p>You manage to be a daughter, a friend, a girlfriend, a student — and still stay true to yourself.</p>
+        <p>You hold so much warmth in you, and you never force it.</p>
+        <p>You don’t just live — you bring meaning. That’s your power.</p>
+        <p>You made my day special just by inviting me to that concert and spending the evening with me. And thank you for your letter. It was real. Just like you.</p>
+        <p>On your birthday, I want to wish you one thing: to be truly happy. Not the loud kind of happy. The quiet, peaceful, real kind.</p>
+        <p>I hope you’re always surrounded by people who see in you what I see — people who love you not for what you do, but for who you are.</p>
+        <p>You mean so much to me. And I’m grateful for everything we’ve shared — and everything still ahead.</p>
+        <p class="signature">— Eldar</p>
+      </div>
+      <button id="scrollBtn" class="fade">Scroll to my favorite part ➤</button>
+    </div>
+  </div>
+  <script>
+    document.getElementById('scrollBtn').onclick = () => {
+      const ps = document.querySelectorAll('.text p');
+      const target = ps[Math.floor(ps.length / 2)];
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+    window.onload = () => {
+      document.querySelectorAll('.fade').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 300);
+      });
+    };
+  </script>
+</body>
+</html>
